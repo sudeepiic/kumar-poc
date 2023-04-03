@@ -4,7 +4,7 @@ function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom:10,
     draggable: true,
-    center: { lat: 41.85, lng: -87.65 },
+    center: { lat: 20.85, lng: 78.96288 },
     disableDefaultUI: true,
   });
 
@@ -18,7 +18,6 @@ function initMap() {
   const onChangeHandler = function () {
     calculateAndDisplayRoute(directionsService, directionsRenderer);
   };
-
   document.getElementById("start").addEventListener("change", onChangeHandler);
   document.getElementById("end").addEventListener("change", onChangeHandler);
 }

@@ -8,6 +8,10 @@ body {
 
 #container {
   height: 100%;
+  width: 100%;
+  margin: auto;
+  max-height: 600px;
+  max-width: 800px;
   display: flex;
 }
 
@@ -15,12 +19,16 @@ body {
   flex-basis: 15rem;
   flex-grow: 1;
   padding: 1rem;
-  max-width: 30rem;
+  max-width: 16rem;
   height: 100%;
   box-sizing: border-box;
   overflow: auto;
 }
+ 
 
+  .adp-summary  + div{
+    display: block !important;
+  }
 #map {
   flex-basis: 0;
   flex-grow: 4;
