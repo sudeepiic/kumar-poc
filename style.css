@@ -4,11 +4,14 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background: #FAF6F0;
 }
 
 #container {
-  height: 600px;
+  height: 305px;
   display: flex;
+  max-width: 1300px;
+  margin: auto;
 }
 li{
   display: flex;
@@ -20,6 +23,9 @@ p{
 }
 ul{
   padding: 0;
+}
+.accordion-button{
+  border-radius: 0 !important;
 }
 .path-marker{
   display: inline-flex;
@@ -38,7 +44,8 @@ ul{
   flex-basis: 15rem;
   flex-grow: 1;
   padding: 1rem;
-  max-width: 30rem;
+  padding-top: 0;
+  padding-bottom: 0;
   height: 100%;
   box-sizing: border-box;
   overflow: auto;
@@ -53,4 +60,30 @@ ul{
 
 #sidebar {
   flex-direction: column;
+}
+.path-mark{
+  cursor: pointer;
+}
+.accordion-button.collapsed::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:not(.collapsed)::after{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+
+}
+@media (max-width: 992px) {
+  #container {
+    display: block;
+   flex-direction: column;
+  }
+  #sidebar-text{
+    padding: 0;
+    margin-top: 1rem;
+  }
+  #map{
+    display: block;
+    height: 400px;
+    flex-basis: 600px;
+  }
 }
