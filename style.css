@@ -24,6 +24,12 @@ p{
 ul{
   padding: 0;
 }
+.active{
+  background-color: #F6F6F6;
+}
+.path-mark:hover{
+  color: orange;
+}
 .accordion-button{
   border-radius: 0 !important;
 }
